@@ -1,0 +1,10 @@
+[Unit]
+Description=Monitor Shutdown Button and set LED's based on network connectivity
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/rpi-monitor.sh
+
+[Install]
+WantedBy=multi-user.target
